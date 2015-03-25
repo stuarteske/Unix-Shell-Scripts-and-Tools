@@ -1,6 +1,6 @@
 # Unix Shell Scripts and Tools
 ## 1. Sanitize
-Sanitize is a perl script to sanitize filenames. Allowed characters are alphanumeric uppers and lowers, ".", "-", "_" and "/". You can edit this to what everyou need. This was designed to fix bad filenames uploaded my user when using ownCloud.
+Sanitize is a perl script to sanitize filenames. Allowed characters are alphanumeric uppers and lowers, ".", "-", "_" and "/". You can edit this to what everyou need. This was designed to fix bad filenames uploaded by users when using ownCloud.
 ### Setup
 
 #### Console
