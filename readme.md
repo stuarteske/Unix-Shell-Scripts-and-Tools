@@ -1,8 +1,9 @@
-# Sanitize Filenames
+# Unix Shell Scripts and Tools
+## 1. Sanitize
+Sanitize is a perl script to sanitize filenames. Allowed characters are alphanumeric uppers and lowers, ".", "-", "_" and "/". You can edit this to what everyou need. This was designed to fix bad filenames uploaded my user when using ownCloud.
+### Setup
 
-## Setup
-
-### Console
+#### Console
 ```
 cd /etc && mkdir scripts && touch sanatize && nano sanatize
 ```
@@ -12,11 +13,11 @@ chmod ugoa+x /etc/scripts/sanitize
 ```
 Make executable for all
 
-### SFTP
+#### SFTP
 SFTP as root and go to /etc, create a dir called scripts and drag the sanatize file into the scripts dir
 
-## Usage
-### Single File
+### Usage
+#### Single File
 1. Move to the target location
 ```
 cd /to/your/bad/filename/directory/location
@@ -30,7 +31,7 @@ perl /etc/scripts/sanitize file.name
 cd /to/your/bad/filename/directory/location && perl /etc/scripts/sanitize file.name
 ```
 
-### Multiple Files
+#### Multiple Files
 1. Move to the target location
 ```
 cd /to/your/bad/filename/directory/location
@@ -44,11 +45,11 @@ find . -type f -print0 | xargs -0 perl /etc/scripts/sanitize
 cd /to/your/bad/filename/directory/location && find . -type f -print0 | xargs -0 perl /etc/scripts/sanitize
 ```
 
-### OwnCloud Complete File Sanitize
+#### OwnCloud Complete File Sanitize
 Example.
 ```
 cd /home/files/public_html/data/ && find . -type f -print0 | xargs -0 perl /etc/scripts/sanitize && cd /home/files/public_html && sudo -u files php console.php files:scan --all
 ```
 
-## Links
+### Links
 1. http://www.karakas-online.de/forum/viewtopic.php?t=10430
