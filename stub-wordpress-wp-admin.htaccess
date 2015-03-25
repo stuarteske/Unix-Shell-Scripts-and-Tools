@@ -1,0 +1,16 @@
+Order Deny,Allow
+Deny from all
+Allow from xxx.xxx.xxx.xxx # example ip's
+Allow from xxx.xxx.xxx.xxx # example ip's
+
+<files ~ "^.*\.([Hh][Tt][Aa])">
+    order allow,deny
+    deny from all
+    satisfy all
+</files>
+
+
+<Files "admin-ajax.php">
+     Satisfy Any
+     Allow from all
+</Files>
