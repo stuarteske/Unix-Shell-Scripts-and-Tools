@@ -1,0 +1,36 @@
+###############################################################################
+# Copyright 2006-2015, Way to the Web Limited
+# URL: http://www.configserver.com
+# Email: sales@waytotheweb.com
+###############################################################################
+# The following IP addresses will be blocked in iptables
+# One IP address per line
+# CIDR addressing allowed with a quaded IP (e.g. 192.168.254.0/24)
+# Only list IP addresses, not domain names (they will be ignored)
+#
+# Note: If you add the text "do not delete" to the comments of an entry then
+# DENY_IP_LIMIT will ignore those entries and not remove them
+#
+# Advanced port+ip filtering allowed with the following format
+# tcp/udp|in/out|s/d=port|s/d=ip
+#
+# See readme.txt for more information regarding advanced port filtering
+#
+tcp|in|d=22|s=0.0.0.0/0
+tcp|in|d=20|s=0.0.0.0/0
+tcp|in|d=21|s=0.0.0.0/0
+tcp|in|d=26|s=0.0.0.0/0
+tcp|in|d=110|s=0.0.0.0/0
+tcp|in|d=443|s=0.0.0.0/0
+tcp|in|d=465|s=0.0.0.0/0
+tcp|in|d=587|s=0.0.0.0/0
+tcp|in|d=10000|s=0.0.0.0/0
+tcp|in|d=20000|s=0.0.0.0/0
+169.254.169.254 # lfd: (CT) IP 169.254.169.254 (-/-/-) found to have 18 connections - Wed Mar 11 14:02:38 2015
+83.244.220.46 # lfd: (CT) IP 83.244.220.46 (GB/United Kingdom/83-244-220-46.cust-83.exponential-e.net) found to have 11 connections - Thu Mar 12 05:31:07 2015
+109.156.215.133 # lfd: (CT) IP 109.156.215.133 (GB/United Kingdom/host109-156-215-133.range109-156.btcentralplus.com) found to have 13 connections - Thu Mar 12 06:19:34 2015
+85.255.233.120 # lfd: (CT) IP 85.255.233.120 (GB/United Kingdom/-) found to have 23 connections - Thu Mar 12 07:04:36 2015
+2.222.155.67 # lfd: (CT) IP 2.222.155.67 (GB/United Kingdom/02de9b43.bb.sky.com) found to have 12 connections - Thu Mar 12 07:21:39 2015
+194.74.67.211 # lfd: (CT) IP 194.74.67.211 (GB/United Kingdom/-) found to have 13 connections - Thu Mar 12 10:36:01 2015
+83.166.162.51 # lfd: (CT) IP 83.166.162.51 (GB/United Kingdom/itsolve1.co.uk) found to have 12 connections - Thu Mar 12 11:16:34 2015
+81.158.173.181 # lfd: (CT) IP 81.158.173.181 (GB/United Kingdom/host81-158-173-181.range81-158.btcentralplus.com) found to have 11 connections - Thu Mar 12 11:42:36 2015
