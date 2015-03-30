@@ -5,9 +5,9 @@
 # modified by Ross Hosman for use with cloudflare.
 #
 # Place at:
-# /usr/local/bin/cf-ddns.sh
+# /usr/local/bin/cf-ddns-updater.sh or /root/cf-ddns-updater.sh
 # run `crontab -e` and add next line:
-# 0 */5 * * * * /usr/local/bin/cf-ddns.sh >/dev/null 2>&1
+# 0 */5 * * * * /usr/local/bin/cf-ddns-updater.sh >/dev/null 2>&1
 #
 # Get subdomain record id:
 # curl https://www.cloudflare/com/api_json.html \
