@@ -25,6 +25,11 @@ order allow,deny
 deny from all
 </files>
 
+<files xmlrpc.php>
+order allow,deny
+deny from all
+</files>
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
