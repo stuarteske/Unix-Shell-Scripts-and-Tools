@@ -2,6 +2,15 @@ SetEnvIfNoCase ^User-Agent$ .*(craftbot|download|extract|stripper|sucker|ninja|c
 Order Deny,Allow
 Deny from env=bad_bot
 
+# Protect files and directories from prying eyes.
+<FilesMatch "\.(engine|inc|info|install|make|module|profile|test|po|sh|.*sql|theme|tpl(\.php)?|xtmpl)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\..*|Entries.*|Repository|Root|Tag|Template)$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig\.save)$">
+  Order allow,deny
+</FilesMatch>
+
+#order deny,allow
+#deny from all
+#allow from 92.19.200.46
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
