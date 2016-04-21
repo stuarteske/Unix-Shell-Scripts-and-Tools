@@ -12,8 +12,9 @@ Deny from env=bad_bot
 #  RewriteEngine On
 #  RewriteCond %{HTTP_HOST} ^olddomain.co.uk$ [OR]
 #  RewriteCond %{HTTP_HOST} ^www.olddomain.co.uk$ [OR]
-#  RewriteCond %{HTTP_HOST} ^www.aliasdomain.com$
-#  RewriteRule (.*)$ http://newdomain.com/$1 [R=301,L]
+#  RewriteCond %{HTTP_HOST} ^www.aliasdomain.com$ [OR]
+#  RewriteCond %{HTTPS} off
+#  RewriteRule (.*)$ https://newdomain.com/$1 [R=301,L]
 #</IfModule>
 
 # Single page redirect
