@@ -7,6 +7,15 @@ Deny from env=bad_bot
   Order allow,deny
 </FilesMatch>
 
+# Redirect from old domain to new domain
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^olddomain.co.uk$ [OR]
+  RewriteCond %{HTTP_HOST} ^www.olddomain.co.uk$ [OR]
+  RewriteCond %{HTTP_HOST} ^www.aliasdomain.com$
+  RewriteRule (.*)$ http://bagsoftrust.com/$1 [R=301,L]
+</IfModule>
+
 #order deny,allow
 #deny from all
 #allow from 92.19.200.46
