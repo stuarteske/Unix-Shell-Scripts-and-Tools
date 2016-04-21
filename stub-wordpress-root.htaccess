@@ -8,13 +8,16 @@ Deny from env=bad_bot
 </FilesMatch>
 
 # Redirect from old domain to new domain
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTP_HOST} ^olddomain.co.uk$ [OR]
-  RewriteCond %{HTTP_HOST} ^www.olddomain.co.uk$ [OR]
-  RewriteCond %{HTTP_HOST} ^www.aliasdomain.com$
-  RewriteRule (.*)$ http://bagsoftrust.com/$1 [R=301,L]
-</IfModule>
+#<IfModule mod_rewrite.c>
+#  RewriteEngine On
+#  RewriteCond %{HTTP_HOST} ^olddomain.co.uk$ [OR]
+#  RewriteCond %{HTTP_HOST} ^www.olddomain.co.uk$ [OR]
+#  RewriteCond %{HTTP_HOST} ^www.aliasdomain.com$
+#  RewriteRule (.*)$ http://newdomain.com/$1 [R=301,L]
+#</IfModule>
+
+# Single page redirect
+#Redirect 301 /old/old.htm http://www.domain.com/new.htm
 
 #order deny,allow
 #deny from all
