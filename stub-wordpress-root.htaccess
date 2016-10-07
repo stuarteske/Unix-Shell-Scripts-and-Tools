@@ -7,6 +7,17 @@ Deny from env=bad_bot
   Order allow,deny
 </FilesMatch>
 
+#http://techwelkin.com/redirect-www-to-non-www-url-htaccess-wordpress
+# www to non-www
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]]
+# non-www to www
+#RewriteEngine On
+#RewriteCond %{HTTP_HOST} ^example.com [nocase]
+#RewriteRule ^(.*) http://www.example.com/$1 [last,redirect=301]
+
 # Redirect from old domain to new domain
 #<IfModule mod_rewrite.c>
 #  RewriteEngine On
